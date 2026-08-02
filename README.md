@@ -42,3 +42,12 @@ The application now:
 - automatically migrates older Base64/JSON images after login.
 
 Do not manually make the bucket public.
+
+
+## Supabase Auth setup (required)
+1. Supabase Dashboard → Authentication → Providers → Email: enable Email provider.
+2. Authentication → URL Configuration:
+   - Site URL: your exact GitHub Pages URL, including repository path and trailing slash.
+   - Redirect URLs: add the same URL and optionally the same path ending in `/**`.
+3. For easiest testing, Authentication → Providers → Email → Confirm email can be temporarily disabled. If left enabled, the user must click the confirmation email before first login.
+4. After uploading a new version, remove the old Home Screen app or refresh Safari with `?v=4` to clear the old service-worker cache.
