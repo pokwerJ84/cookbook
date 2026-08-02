@@ -1,7 +1,7 @@
 {
-  "name": "Japan Protein Cookbook",
+  "name": "Japan Protein Cookbook v9",
   "short_name": "Protein Cookbook",
-  "description": "Multilingual high-protein cookbook for life in Japan.",
+  "description": "Multilingual fitness and family cookbook for Japan with cloud sync.",
   "lang": "ja",
   "start_url": "./index.html",
   "scope": "./",
@@ -22,19 +22,19 @@
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-maskable-512.png",
+      "src": "./icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
