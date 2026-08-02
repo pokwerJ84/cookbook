@@ -1,7 +1,7 @@
-const CACHE = 'japan-protein-cookbook-v2';
+const CACHE = 'japan-protein-cookbook-v3';
 const APP_SHELL = [
   './', './index.html', './manifest.webmanifest',
-  './icons/icon-32.png', './icons/icon-180.png',
+  './icons/icon-32.png', './icons/icon-180.png', './apple-touch-icon.png', './apple-touch-icon-precomposed.png',
   './icons/icon-192.png', './icons/icon-512.png',
   './icons/icon-maskable-512.png'
 ];
