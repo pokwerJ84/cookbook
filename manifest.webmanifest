@@ -2,7 +2,7 @@
   "name": "Japan Protein Cookbook",
   "short_name": "Protein Cookbook",
   "description": "Multilingual high-protein cookbook for life in Japan.",
-  "lang": "cs",
+  "lang": "ja",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
