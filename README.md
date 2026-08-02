@@ -28,3 +28,17 @@ Open the site in Chrome and choose **Install app** or **Add to Home screen**.
 - GitHub Pages must be used; opening `index.html` directly from Files cannot install the PWA or run the service worker.
 - The app shell works offline after the first visit. Supabase synchronization requires internet.
 - When changing app files, update the cache name in `service-worker.js` from `v1` to `v2`, etc.
+
+## Supabase Storage for recipe photos
+
+Run the **latest complete** `supabase_cookbook_setup.sql` in Supabase SQL Editor. It creates a private bucket named `recipe-images` and Row Level Security policies. Each user can access only the folder named with their own user UUID.
+
+The application now:
+- resizes photos in the browser before upload,
+- uploads them to the private `recipe-images` bucket,
+- stores only the Storage path in `cookbook_state.photos`,
+- creates temporary signed URLs when displaying images,
+- deletes the old file when an image is replaced or removed,
+- automatically migrates older Base64/JSON images after login.
+
+Do not manually make the bucket public.
