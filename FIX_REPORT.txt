@@ -1,0 +1,19 @@
+Japan Protein Cookbook v10 - oprava startu aplikace
+
+Nalezene priciny:
+1. applyLanguage() a render() se spoustely pred deklaraci activeFilters.
+   To vyvolalo ReferenceError a zastavilo cely JavaScript.
+2. Pomocna funkce msg() pro vicejazycne auth hlasky chybela.
+3. Cache verze zustala na v9, takze iPhone mohl nacitat rozbitou verzi.
+
+Opravy:
+- inicializace presunuta az za deklarace vsech filtru a enhancement funkci
+- doplnena funkce msg(cs,en,ja)
+- cache a asset verze zvysena na v10
+- zachovana flat struktura bez slozek
+
+Kontroly:
+- app.js: node --check OK
+- index odkazy na app.css/app.js/manifest OK
+- vsechny PWA soubory a ikony pritomny
+- Supabase Project URL a publishable key pritomny

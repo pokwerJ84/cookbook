@@ -1,0 +1,9 @@
+GITHUB UPLOAD – BEZ SLOŽEK
+
+1. Otevři repozitář na GitHubu.
+2. Add file → Upload files.
+3. Označ všechny soubory z této složky najednou.
+4. Přetáhni je do GitHubu.
+5. Commit changes.
+
+Všechny soubory jsou v jedné složce. Není potřeba nahrávat žádné podsložky.
