@@ -33,6 +33,7 @@ let lang=localStorage.getItem('cookLang')||'cs', family=false, view='all', curre
 const defaultPhotos={
 'Snídaně':'https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=1000&q=80','Chlebíček':'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80','Muffiny':'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=1000&q=80','Brownies':'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1000&q=80','Cheesecake':'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80','Cookies':'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1000&q=80','Studený dezert':'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=80','Slané':'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1000&q=80','Meal prep':'https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=1000&q=80'};
 function t(k){return UI[lang][k]||UI.cs[k]||k}
+function msg(cs,en,ja){return lang==='ja'?ja:lang==='en'?en:cs}
 function customRecipes(){if(cloudUser&&cloudState)return cloudState.custom_recipes||[];try{return JSON.parse(localStorage.getItem('cookCustom')||'[]')}catch{return []}}
 function allRecipes(){return [...baseRecipes,...customRecipes()]}
 function favs(){if(cloudUser&&cloudState)return cloudState.favorites||[];try{return JSON.parse(localStorage.getItem('cookFav')||'[]')}catch{return []}}
@@ -126,9 +127,9 @@ function showCookStep(){const r=currentRecipe();if(!r)return;const steps=r.steps
 document.getElementById('startCooking').onclick=()=>{const r=currentRecipe();if(!r||!r.steps?.length)return;cookIndex=0;document.getElementById('cookTitle').textContent=translateName(r.name);document.getElementById('cookModal').classList.add('open');showCookStep()};
 document.getElementById('cookPrev').onclick=()=>{cookIndex--;showCookStep()};document.getElementById('cookNext').onclick=()=>{const r=currentRecipe();if(cookIndex>=(r?.steps?.length||1)-1){closeModal('cookModal');toast('Hotovo! Dobrou chuť.');return}cookIndex++;showCookStep()};document.getElementById('closeCook').onclick=()=>closeModal('cookModal');document.getElementById('cookModal').onclick=e=>{if(e.target.id==='cookModal')closeModal('cookModal')};
 
-applyLanguage();initSupabase();
+// Initialization moved to the end after all enhancement state is declared.
 
-// v9 service worker registration below
+// v10 service worker registration below
 
 
 // ===== v9 enhancement layer =====
@@ -136,7 +137,7 @@ Object.assign(UI.cs, {"filters": "Filtry", "cookedHistory": "Vařil jsem", "shop
 Object.assign(UI.en, {"filters": "Filters", "cookedHistory": "Cooked", "shoppingList": "Shopping list", "clearList": "Clear list", "addToShopping": "Add to shopping", "markCooked": "Mark as cooked", "updateAvailable": "A new app version is available.", "updateNow": "Update", "cookedOn": "Cooked", "noHistory": "You have no cooking history yet.", "emptyShopping": "The shopping list is empty.", "familyEstimate": "Family nutrition is calculated from the listed substitution and remains an estimate."});
 Object.assign(UI.ja, {"filters": "フィルター", "cookedHistory": "作った料理", "shoppingList": "買い物リスト", "clearList": "リストを削除", "addToShopping": "買い物リストに追加", "markCooked": "作った料理に追加", "updateAvailable": "新しいバージョンがあります。", "updateNow": "更新", "cookedOn": "作った日", "noHistory": "調理履歴はまだありません。", "emptyShopping": "買い物リストは空です。", "familyEstimate": "家族向けの栄養値は記載された置き換えから計算した目安です。"});
 
-const APP_VERSION='9';
+const APP_VERSION='10';
 let activeFilters=new Set();
 function readJson(key,fallback){try{return JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback))}catch{return fallback}}
 function writeJson(key,val){localStorage.setItem(key,JSON.stringify(val))}
@@ -184,6 +185,8 @@ const originalCustomRecipes=customRecipes;
 customRecipes=function(){return originalCustomRecipes().map(r=>r.custom?{...r,name:safeText(r.name),ingredients:(r.ingredients||[]).map(safeText),steps:(r.steps||[]).map(safeText)}:r)};
 
 window.addEventListener('DOMContentLoaded',()=>{
+ applyLanguage();
+ initSupabase();
  document.querySelectorAll('.filter-chip').forEach(b=>{b.onclick=()=>{const k=b.dataset.filter;if(k==='all')activeFilters.clear();else activeFilters.has(k)?activeFilters.delete(k):activeFilters.add(k);updateFilterUI();render()}});updateFilterUI();
  document.getElementById('filterDrawerBtn')?.addEventListener('click',()=>document.getElementById('filterPanel').classList.toggle('open'));
  document.getElementById('historyBtn')?.addEventListener('click',()=>{renderHistory();document.getElementById('historyModal').classList.add('open')});
@@ -199,7 +202,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 // PWA update prompt
 if('serviceWorker' in navigator && location.protocol!=='file:'){
- navigator.serviceWorker.register('./service-worker.js?v=9').then(reg=>{
+ navigator.serviceWorker.register('./service-worker.js?v=10').then(reg=>{
   reg.addEventListener('updatefound',()=>{const w=reg.installing;w?.addEventListener('statechange',()=>{if(w.state==='installed'&&navigator.serviceWorker.controller){document.getElementById('updateBanner').hidden=false}})});
   document.getElementById('updateApp')?.addEventListener('click',()=>{reg.waiting?.postMessage({type:'SKIP_WAITING'});location.reload()});
  }).catch(console.error);
