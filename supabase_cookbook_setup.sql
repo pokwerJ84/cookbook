@@ -7,12 +7,18 @@ create table if not exists public.cookbook_state (
   -- Stores only Storage paths, for example:
   -- {"101":{"path":"USER_UUID/101-123456789.jpg"}}
   photos jsonb not null default '{}'::jsonb,
+  food_library jsonb not null default '[]'::jsonb,
   language text not null default 'cs' check (language in ('cs','en','ja')),
   updated_at timestamptz not null default now()
 );
 
+alter table public.cookbook_state add column if not exists food_library jsonb not null default '[]'::jsonb;
+
+comment on column public.cookbook_state.food_library is
+  'Custom nutrition foods saved from Open Food Facts or USDA.';
+
 comment on column public.cookbook_state.custom_recipes is
-  'Stores user-created recipes and v12 edits/overrides of built-in recipes.';
+  'Stores user-created recipes and v13 edits/overrides of built-in recipes.';
 
 alter table public.cookbook_state enable row level security;
 

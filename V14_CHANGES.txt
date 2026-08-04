@@ -1,0 +1,10 @@
+JAPAN PROTEIN COOKBOOK v14
+
+- Redesigned mobile filters as a clean bottom sheet with grouped choices.
+- Search remains visible in a compact sticky bar on phones.
+- Active filters are shown as a small summary instead of a long chip row.
+- Added TheMealDB online recipe inspiration and one-tap import.
+- Added Open Food Facts barcode lookup and custom nutrition-food library.
+- Added optional USDA FoodData Central integration through a secure Supabase Edge Function.
+- Custom nutrition foods sync through the cookbook_state.food_library column.
+- Updated PWA cache and manifest to v14.

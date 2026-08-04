@@ -1,7 +1,7 @@
 {
-  "name": "Japan Protein Cookbook v12",
+  "name": "Japan Protein Cookbook v14",
   "short_name": "Protein Cookbook",
-  "description": "Multilingual fitness and family cookbook for Japan with editable recipes, automatic nutrition calculation and cloud sync.",
+  "description": "Multilingual editable cookbook for Japan with 75 built-in recipes, mobile filter workspace, online recipe inspiration, barcode nutrition lookup and cloud sync.",
   "lang": "cs",
   "start_url": "./index.html",
   "scope": "./",

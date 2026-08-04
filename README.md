@@ -1,4 +1,4 @@
-# Japan Protein Cookbook v12
+# Japan Protein Cookbook v14
 
 GitHub Pages-ready multilingual PWA for fitness and family recipes in Japan.
 
@@ -19,7 +19,7 @@ GitHub Pages-ready multilingual PWA for fitness and family recipes in Japan.
 - `index.html` – application shell
 - `app.css` – styles
 - `app.js` – original application logic and the 63-recipe database
-- `app-v12.js` – universal editor, automatic nutrition engine and v12 fixes
+- `app-v13.js` – universal editor, automatic nutrition engine and v13 fixes
 - `service-worker.js` – offline cache and update flow
 - `manifest.webmanifest` – installation metadata
 - `supabase_cookbook_setup.sql` – database and private image-storage policies
@@ -41,3 +41,15 @@ For existing recipes, the calculator keeps the original saved nutrition and appl
 4. Select `main` and `/ (root)`.
 
 The Supabase table structure remains compatible with earlier versions. Built-in recipe edits are stored inside the existing `custom_recipes` JSON column as overrides, so no destructive migration is required.
+
+
+## Version 13
+
+Version 13 contains 75 recipes, including two new chapters for low-calorie breakfasts and dinners. See `V13_CHANGES.txt` and `API_INTEGRATION_PLAN.md`.
+
+
+## v14 highlights
+- Mobile filter bottom sheet
+- TheMealDB online inspiration
+- Open Food Facts barcode nutrition lookup
+- Optional USDA search through Supabase Edge Function

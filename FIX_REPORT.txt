@@ -1,23 +1,14 @@
-Japan Protein Cookbook v12 – souhrn oprav
+Japan Protein Cookbook v13 – souhrn změn
+=========================================
 
-Opraveno:
-1. Sjednocena verze aplikace, manifestu, assetů a service-worker cache na v12.
-2. Výživový panel se při otevření dalšího receptu vždy vytvoří znovu.
-3. Rodinná verze používá skutečné odvozené nebo ručně zadané suroviny.
-4. Nákupní seznam v rodinném režimu používá rodinné suroviny.
-5. Parser rozpozná zlomky, rozsahy, malé kusy, vejce, lžíce a lžičky.
-6. Všechny texty uložené uživatelem jsou normalizované před vykreslením.
-7. Všech 147 unikátních řádků surovin ve vestavěných receptech je rozpoznáno.
-
-Nové funkce:
-- úprava všech vestavěných receptů
-- bezpečné obnovení původního receptu
-- automatický výpočet kalorií, bílkovin, sacharidů, tuků a vlákniny
-- počet porcí pro celý recept
-- přesné suroviny rodinné verze
-- rychlé přidání 1 lžičky arašídového másla
-- automatická synchronizace úprav přes stávající Supabase pole custom_recipes
-
-Příklad kontroly:
-Jardova snídaně 523 kcal + 1 lžička arašídového másla = přibližně
-552 kcal, 51,3 g bílkovin, 60 g sacharidů, 12,5 g tuku a 12,3 g vlákniny.
+1. Přidáno 12 plně upravitelných nízkokalorických receptů.
+2. Přidána kapitola 10: Nízkokalorické snídaně (6 receptů).
+3. Přidána kapitola 11: Nízkokalorické večeře (6 receptů).
+4. Japan Shopping Guide přesunut na číslo 12.
+5. Celkový počet receptů zvýšen z 63 na 75.
+6. Přidány filtry Do 300 kcal, Snídaně a Večeře.
+7. Doplněny přesné anglické a japonské překlady všech nových receptů.
+8. Automatická výživa rozšířena o japonské suroviny a ryby používané v nových receptech.
+9. U wakame opraveno množství na 3 g sušené (přibližně 30 g po namočení).
+10. Sjednoceny odkazy, manifest a service-worker cache na v13.
+11. Přidán návrh bezpečné architektury pro externí receptová a nutriční API.
