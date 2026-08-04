@@ -1,0 +1,12 @@
+GITHUB UPLOAD – VERZE 12
+
+1. Rozbal ZIP.
+2. Otevři svůj Cookbook repozitář na GitHubu.
+3. Add file → Upload files.
+4. Označ a přetáhni všechny soubory z rozbalené složky.
+5. Potvrď nahrazení starých souborů a klikni na Commit changes.
+6. Po nasazení otevři aplikaci. Pokud se ukáže žlutá lišta s aktualizací,
+   klikni na Aktualizovat. Na iPhonu může pomoci aplikaci úplně zavřít a znovu otevřít.
+
+Všechny soubory jsou v jedné složce. Není nutné vytvářet podsložky.
+Soubor app-v12.js musí být nahrán společně s ostatními soubory.
