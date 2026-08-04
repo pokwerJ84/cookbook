@@ -1,0 +1,11 @@
+Japan Protein Cookbook v15
+
+- 16 new editable recipes focused on okara, tofu, edamame and soy.
+- Total built-in recipes: 91.
+- New chapter 12: Okara, tofu and soy.
+- Ingredient filters for Okara, Tofu, and Soy/Natto.
+- New FatSecret healthy-recipe search tab with calorie and protein filters.
+- FatSecret integration uses a Supabase Edge Function so credentials stay private.
+- Only FatSecret recipe IDs are bookmarked; details are fetched live.
+- Online recipes moved to chapter 13 and Japan Shopping Guide to chapter 14.
+- PWA cache and all asset versions updated to v15.

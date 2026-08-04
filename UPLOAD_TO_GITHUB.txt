@@ -1,26 +1,16 @@
-JAPAN PROTEIN COOKBOOK v14 – UPLOAD TO GITHUB
-==============================================
+JAPAN PROTEIN COOKBOOK v16 – UPLOAD TO GITHUB
 
-1. Otevři svůj GitHub repozitář.
-2. Zvol Add file -> Upload files.
-3. Nahraj VŠECHNY soubory z této složky a potvrď Commit changes.
-4. Zkontroluj hlavně tyto soubory:
-   - index.html
-   - app.js
-   - app-v14.js
-   - app.css
-   - manifest.webmanifest
-   - service-worker.js
-   - všechny icon-*.png soubory
-5. Pokud používáš Supabase synchronizaci, spusť jednou aktualizovaný soubor:
-   - supabase_cookbook_setup.sql
-   Tím se bezpečně přidá sloupec food_library pro vlastní potraviny.
-6. TheMealDB a Open Food Facts fungují bez soukromého API klíče.
-7. Volitelné USDA hledání:
-   - přečti V14_SETUP.md
-   - nasaď supabase/functions/usda-food-search
-   - nastav USDA_API_KEY jako Supabase secret
-8. Po otevření aplikace použij tlačítko Aktualizovat, pokud se zobrazí.
-9. Pokud iPhone drží starou verzi, aplikaci zavři a znovu otevři. V krajním případě ji odeber z plochy a přidej znovu.
+Upload all files from the cookbook-main folder and replace the old versions.
+Important files:
+- index.html
+- app.css
+- app.js
+- app-v14.js
+- app-v16.js
+- manifest.webmanifest
+- service-worker.js
 
-Staré app-v13.js a app-v12.js už v14 nepoužívá.
+For FatSecret live healthy-recipe search, follow V16_SETUP.md and redeploy:
+  supabase functions deploy fatsecret-recipes
+
+After deployment use the in-app Test connection button.

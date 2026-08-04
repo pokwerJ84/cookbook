@@ -1,7 +1,7 @@
 {
-  "name": "Japan Protein Cookbook v14",
+  "name": "Japan Protein Cookbook v16",
   "short_name": "Protein Cookbook",
-  "description": "Multilingual editable cookbook for Japan with 75 built-in recipes, mobile filter workspace, online recipe inspiration, barcode nutrition lookup and cloud sync.",
+  "description": "Multilingual editable cookbook for Japan with 91 built-in recipes, okara/tofu collection, mobile filters, online healthy recipe search, barcode nutrition lookup and cloud sync.",
   "lang": "cs",
   "start_url": "./index.html",
   "scope": "./",

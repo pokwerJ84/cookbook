@@ -1,9 +1,9 @@
-# Japan Protein Cookbook v14
+# Japan Protein Cookbook v16
 
 GitHub Pages-ready multilingual PWA for fitness and family recipes in Japan.
 
 ## Main features
-- 63 built-in recipes plus user-created recipes
+- 91 built-in recipes plus user-created recipes
 - Czech, English and Japanese interface
 - Fitness and family ingredient versions
 - Every recipe can be edited, including built-in recipes
@@ -19,7 +19,8 @@ GitHub Pages-ready multilingual PWA for fitness and family recipes in Japan.
 - `index.html` – application shell
 - `app.css` – styles
 - `app.js` – original application logic and the 63-recipe database
-- `app-v13.js` – universal editor, automatic nutrition engine and v13 fixes
+- `app-v14.js` – mobile filters, online inspiration and food-data integrations
+- `app-v16.js` – okara/tofu collection and verified FatSecret OAuth 2.0 integration
 - `service-worker.js` – offline cache and update flow
 - `manifest.webmanifest` – installation metadata
 - `supabase_cookbook_setup.sql` – database and private image-storage policies
@@ -53,3 +54,15 @@ Version 13 contains 75 recipes, including two new chapters for low-calorie break
 - TheMealDB online inspiration
 - Open Food Facts barcode nutrition lookup
 - Optional USDA search through Supabase Edge Function
+
+
+## v15 highlights
+- 91 built-in recipes, including 16 okara/tofu/soy recipes
+- ingredient filters for okara, tofu and soy/natto
+- optional FatSecret healthy recipe search through a secure Supabase Edge Function
+
+
+## v16 highlights
+- verified OAuth 2.0 client-credentials flow through Supabase
+- recommended FatSecret URL-path endpoints
+- in-app FatSecret connection test and clearer diagnostics

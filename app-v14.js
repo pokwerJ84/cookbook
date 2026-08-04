@@ -857,7 +857,7 @@
       usdaSetup:'USDA vyžaduje bezpečnou Supabase funkci. V ZIPu je připravená ve složce supabase/functions.',
       usdaUnavailable:'USDA proxy zatím není nasazená.', addFood:'Přidat do kalkulačky', close:'Zavřít',
       filters:'Filtry', sortAndMode:'Řazení a režim', searchLabel:'Hledat v kuchařce', countSuffix:'filtrů',
-      onlineChapter:'12. Online recepty', estimatedNutrition:'Výživa je orientačně vypočítaná z rozpoznaných ingrediencí.',
+      onlineChapter:'13. Online recepty', estimatedNutrition:'Výživa je orientačně vypočítaná z rozpoznaných ingrediencí.',
       networkNeeded:'Pro online inspiraci je potřeba internetové připojení.'
     },
     en: {
@@ -875,7 +875,7 @@
       usdaPlaceholder:'Search in English, for example peanut butter', searchUsda:'Search USDA',
       usdaSetup:'USDA requires the secure Supabase function included in supabase/functions.', usdaUnavailable:'The USDA proxy is not deployed yet.',
       addFood:'Add to calculator', close:'Close', filters:'Filters', sortAndMode:'Sorting and mode', searchLabel:'Search cookbook', countSuffix:'filters',
-      onlineChapter:'12. Online Recipes', estimatedNutrition:'Nutrition is estimated from recognized ingredients.', networkNeeded:'Internet access is required for online inspiration.'
+      onlineChapter:'13. Online Recipes', estimatedNutrition:'Nutrition is estimated from recognized ingredients.', networkNeeded:'Internet access is required for online inspiration.'
     },
     ja: {
       online:'オンラインレシピ', filterTitle:'食べたいものをすぐに見つける', filterBasics:'基本', filterGoal:'目的別', filterMeal:'食事タイプ',
@@ -890,7 +890,7 @@
       delete:'削除', noSavedFoods:'保存した食品はまだありません。', usdaPlaceholder:'英語で検索（例: peanut butter）', searchUsda:'USDAを検索',
       usdaSetup:'USDAにはZIP内のSupabase安全関数が必要です。', usdaUnavailable:'USDAプロキシはまだ設定されていません。', addFood:'計算機に追加',
       close:'閉じる', filters:'フィルター', sortAndMode:'並べ替え・モード', searchLabel:'料理本を検索', countSuffix:'件',
-      onlineChapter:'12. オンラインレシピ', estimatedNutrition:'認識できた材料から栄養値を推定しています。', networkNeeded:'オンラインレシピにはインターネット接続が必要です。'
+      onlineChapter:'13. オンラインレシピ', estimatedNutrition:'認識できた材料から栄養値を推定しています。', networkNeeded:'オンラインレシピにはインターネット接続が必要です。'
     }
   };
 
@@ -899,7 +899,7 @@
   const round14 = (value, digits = 1) => { const m = 10 ** digits; return Math.round((Number(value) || 0) * m) / m; };
 
   function addTranslations() {
-    Object.assign(CHAPTERS, {'12. Online recepty':{en:'12. Online Recipes', ja:'12. オンラインレシピ'}});
+    Object.assign(CHAPTERS, {'13. Online recepty':{en:'13. Online Recipes', ja:'13. オンラインレシピ'}});
     for (const code of ['cs','en','ja']) {
       if (!UI[code]) UI[code] = {};
       UI[code].online = TEXT[code].online;
@@ -1116,7 +1116,7 @@
     if (customRecipes().some(r=>String(r.sourceMealId||'')===String(meal.idMeal))) {toast(tx('alreadyImported'));return;}
     const ingredients=mealIngredients(meal); const calc=window.__cookbookV14.calculateIngredients(ingredients,1).total;
     const id=Date.now();
-    const record={id,custom:true,name:meal.strMeal,chapter:'12. Online recepty',emoji:'🌐',kind:'Meal prep',flavor:'online',
+    const record={id,custom:true,name:meal.strMeal,chapter:'13. Online recepty',emoji:'🌐',kind:'Meal prep',flavor:'online',
       kcal:calc.kcal,p:calc.p,c:calc.c,f:calc.f,fiber:calc.fiber,servings:1,nutritionMode:'calculated',cost:0,time:'30 min',diff:'Online recipe',
       ingredients,steps:splitInstructions(meal.strInstructions),familySwap:[],familyIngredients:[],stores:`TheMealDB${meal.strSource?` · ${meal.strSource}`:''}`,
       prep:tx('estimatedNutrition'),freeze:'',keep:'',image:meal.strMealThumb||'',sourceMealId:meal.idMeal,sourceUrl:meal.strSource||meal.strYoutube||''};
