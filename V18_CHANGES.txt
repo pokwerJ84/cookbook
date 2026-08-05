@@ -1,0 +1,12 @@
+JAPAN PROTEIN COOKBOOK v18
+
+- Rebuilt the app as one self-contained JavaScript bundle: app-v18.js.
+- Removed the fragile app.js + app-v14.js + app-v16.js + app-v17.js loading chain.
+- FatSecret search now uses one Supabase invocation instead of a health call followed by a second search call.
+- The connection test now calls the real recipes/search/v3 endpoint.
+- The app and Edge Function both report version 18, so an outdated Supabase deployment is visible immediately.
+- FatSecret status still shows the exact blocked IP address when FatSecret returns it.
+- Barcode scanning remains available by live camera, photo, or manual barcode entry.
+- Recipe image/edit buttons are centered on mobile.
+- Shopping features remain removed.
+- PWA cache was reset to v18.
