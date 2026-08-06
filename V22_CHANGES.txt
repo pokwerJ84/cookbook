@@ -1,0 +1,14 @@
+Japan Protein Cookbook v22
+
+- 110 offline recipes
+- New chapter: Mrazák a do 5 minut (10 recipes)
+- Mandatory servings/yield metadata for built-in recipes
+- Recipe scaling 0.5x / 1x / 2x without changing the source recipe
+- Ingredient profiles distinguish okara powder and fresh nama okara
+- Provisional Japan Meat Hokkaido Yogurt Plain profile
+- Duplicate warning in recipe editor
+- New tags and filters: freezer, under 5 minutes, microwave, no-bake, post-workout
+- Recipe #37 changed to a genuinely different cottage-lemon protein cheesecake
+- Jarda yogurt bowl protein corrected provisionally from 50 g to about 37 g
+
+Important: Japan Meat yogurt data remains provisional until the back nutrition label is entered.

@@ -1,0 +1,8 @@
+Japan Protein Cookbook v20
+
+- Added 9 okara/kinako protein-cookie recipes (IDs 92–100).
+- Total built-in recipes: 100.
+- Added exact EN/JA recipe-name and recipe-line translations.
+- Added kinako and mango to automatic nutrition calculation.
+- Per-cookie nutrition is shown with a default batch of 10 cookies. The first recipe explicitly specifies 10; recipes 2–9 use 10 as an editable default because the source omitted yield.
+- FatSecret Fly.io proxy remains proxy v19 and does not need to be redeployed for this recipe-only update.

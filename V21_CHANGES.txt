@@ -1,0 +1,7 @@
+Japan Protein Cookbook v21
+
+- Online Recipes: clicking a recipe card now opens its detail immediately in a focused full-screen overlay instead of rendering it below the full result list.
+- FatSecret recipe details use the same immediate overlay behavior.
+- Added visible Back / Close controls, backdrop close, focus handling and mobile safe-area layout.
+- PWA cache and application assets updated to v21.
+- No Supabase or Fly.io changes are required for this UI update.

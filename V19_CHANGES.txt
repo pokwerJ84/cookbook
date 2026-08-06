@@ -1,0 +1,11 @@
+JAPAN PROTEIN COOKBOOK v19
+
+- FatSecret was moved from Supabase Edge Functions to a dedicated Fly.io proxy.
+- The Fly proxy supports an app-scoped static egress IPv4, so the FatSecret whitelist no longer changes every day.
+- The app has an in-app Fly.io proxy URL field. No source-code edit is needed after deployment.
+- FatSecret status distinguishes missing proxy, offline proxy, login required, missing secrets, blocked static IP, outdated proxy, and connected status.
+- FatSecret requests require a valid Supabase user session to protect the API quota.
+- The proxy caches OAuth tokens, normalizes search/detail results, rate-limits requests, and never exposes credentials.
+- The old Supabase FatSecret function was removed from the package.
+- Barcode scanning, 91 recipes, editable macros, cloud sync, and the v18 mobile fixes remain.
+- PWA cache was reset to v19.

@@ -1,0 +1,10 @@
+Japan Protein Cookbook v23
+
+- Automatic update check when the app starts.
+- Update check whenever the installed PWA returns from the background or reconnects to the internet.
+- Hourly update check during long sessions.
+- Safe update banner with an explicit Update now button, preventing reload while editing or cooking.
+- Current app version and a manual Check for update button in Account / Supabase.
+- Service worker no longer forces an immediate update during active use.
+- Network-first navigation and cache cleanup for reliable GitHub Pages PWA updates.
+- Existing home-screen icon and locally/Supabase-stored data remain unchanged.

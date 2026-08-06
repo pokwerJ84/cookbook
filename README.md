@@ -1,10 +1,10 @@
-# Japan Protein Cookbook v18
+# Japan Protein Cookbook v23
 
 GitHub Pages-ready multilingual PWA for fitness and family recipes in Japan.
 
 ## Main features
 
-- 91 built-in recipes plus user-created recipes
+- 100 built-in recipes plus user-created recipes
 - Czech, English and Japanese interface
 - Fitness and family ingredient versions
 - Every recipe can be edited, including built-in recipes
@@ -50,3 +50,20 @@ A successful FatSecret test must display:
 - `Function v18`
 
 The existing Supabase database remains compatible. No destructive migration is required.
+
+
+## v19 FatSecret
+FatSecret now runs through the `fly-fatsecret-proxy` service with an app-scoped static egress IP. See `V19_SETUP_CZ.md`.
+
+## v20 recipes
+Added 9 editable okara and kinako protein-cookie recipes from the user-provided collection. The nutrition calculator now recognizes kinako and mango. Recipes 2–9 default to 10 cookies because the source did not specify a yield; this can be edited in the app.
+
+
+## v21 online detail behavior
+- Clicking an Online Recipes card now opens the recipe immediately in a full-screen detail overlay.
+- The same immediate detail overlay is used for FatSecret recipe details.
+- Use the back/close button at the top to return to results.
+
+
+## v23 updates
+Installed PWA copies check for a new version on launch, resume, reconnect, and hourly. A safe update banner lets the user reload only when ready.

@@ -1,9 +1,9 @@
 {
-  "name": "Japan Protein Cookbook v18",
-  "short_name": "Protein Cookbook",
-  "description": "Multilingual editable cookbook for Japan with 91 built-in recipes, a single stable app bundle, barcode scanning, FatSecret status diagnostics and cloud sync.",
+  "name": "Japan Protein Cookbook v24",
+  "short_name": "Cookbook v24",
+  "description": "Protein cookbook with automatic update checks, ingredient-based nutrition, serving scaling and freezer recipes.",
   "lang": "cs",
-  "start_url": "./index.html?v=18",
+  "start_url": "./index.html?v=23",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",

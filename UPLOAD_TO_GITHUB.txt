@@ -1,5 +1,3 @@
-UPLOAD ALL FILES FROM THIS cookbook-main FOLDER TO THE ROOT OF THE GITHUB REPOSITORY.
-
-v18 uses only one JavaScript file: app-v18.js
-After GitHub upload, also update the existing Supabase Edge Function with:
-supabase/functions/fatsecret-recipes/index.ts
+Upload/replace every file from this cookbook-main folder in the GitHub repository.
+Important v23 files: index.html, app-v23.js, app.css, service-worker.js, manifest.webmanifest.
+Delete old app-v22.js from GitHub to avoid confusion, although v23 no longer references it.

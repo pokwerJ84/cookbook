@@ -1,0 +1,8 @@
+Japan Protein Cookbook v24
+
+- Systémové upozornění při zjištění nové verze, pokud uživatel udělí oprávnění.
+- Výrazný banner Aktualizovat nyní.
+- Červený bod u záložky Účet, dokud se aktualizace nenainstaluje.
+- Tlačítko Povolit upozornění v účtu.
+- Bezpečný fallback: i bez oprávnění zůstává banner a stav v účtu.
+- PWA cache a odkazy sjednoceny na v24.
