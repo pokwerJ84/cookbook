@@ -1,0 +1,7 @@
+Japan Protein Cookbook v26
+- larger single-column mobile recipe cards
+- larger recipe photos, titles, macro boxes and primary action buttons
+- bigger ingredient checkboxes and cleaner spacing
+- improved ingredient detail controls
+- cleaner bottom navigation with larger icons and add button
+- bumped PWA cache and app references to v26

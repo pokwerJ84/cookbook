@@ -1,5 +1,5 @@
-const CACHE='japan-protein-cookbook-v24';
-const ASSETS=['./','./index.html','./app.css?v=24','./app-v24.js?v=24','./manifest.webmanifest?v=24','./apple-touch-icon.png','./icon-192.png','./icon-512.png'];
+const CACHE='japan-protein-cookbook-v26';
+const ASSETS=['./','./index.html','./app.css?v=26','./app-v26.js?v=26','./manifest.webmanifest?v=26','./apple-touch-icon.png','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('message',event=>{if(event.data?.type==='SKIP_WAITING')self.skipWaiting()});

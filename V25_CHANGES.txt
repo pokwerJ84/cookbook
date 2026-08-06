@@ -1,0 +1,5 @@
+Japan Protein Cookbook v25
+- centered mobile buttons more consistently across cards, detail actions and dialogs
+- changed favorite heart buttons to a clearer red style
+- redesigned ingredient nutrition summary box to clearly separate whole recipe vs per-serving values
+- bumped service worker / manifest / script references to v25

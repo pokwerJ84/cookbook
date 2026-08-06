@@ -151,3 +151,69 @@ body.online-detail-open{overflow:hidden}
 .app-update-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .app-update-info{min-width:0;flex:1}
 @media(max-width:600px){.app-update-card{align-items:stretch!important}.app-update-actions{display:grid;grid-template-columns:1fr}.app-update-actions .btn{width:100%;justify-content:center;text-align:center}.update-banner{position:sticky;top:8px;z-index:1200;box-shadow:0 8px 22px rgba(0,0,0,.18)}}
+
+
+/* v25 mobile alignment + favorites + clearer nutrition summary */
+.btn,.tab{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;gap:6px}
+.actions .btn,.actions .fav,.detail-quick-actions .btn,.cook-controls .btn,.top-actions .btn,.online-detail-actions .btn,.auth-actions .btn,.filter-sheet-actions .btn,.fs-status-actions .btn,.compact-tools .btn{justify-content:center;text-align:center}
+.actions .fav,.recipe-hero .hero-fav{display:flex;align-items:center;justify-content:center;color:#e04461 !important;border-color:#f2c2cb;background:#fff5f7}
+.actions .fav{font-size:24px;font-weight:900}
+.recipe-hero .hero-fav{box-shadow:0 8px 18px rgba(224,68,97,.16)}
+.ingredient-total-box{margin-top:14px;padding:14px;border-radius:18px;background:#edf7f2;border:1px solid #cde9da}
+.ingredient-total-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.ingredient-total-title{font-weight:900;font-size:20px;line-height:1.15;margin:0}
+.ingredient-total-subtitle{margin-top:4px;font-size:12px;color:var(--muted);font-weight:700}
+.ingredient-total-badge{background:#fff;border:1px solid #cde9da;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+.ingredient-total-section{background:#ffffffb8;border:1px solid #d9ece3;border-radius:14px;padding:10px 10px 12px;margin-top:10px}
+.ingredient-total-section-title{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.ingredient-total-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.ingredient-total-grid span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 5px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:62px}
+.ingredient-total-grid b{display:block;font-size:18px;line-height:1.05}
+.ingredient-total-grid small{font-size:11px;color:var(--muted);margin-top:4px}
+@media(max-width:580px){.ingredient-total-head{flex-direction:column;align-items:stretch}.ingredient-total-badge{align-self:flex-start}.ingredient-total-grid{grid-template-columns:repeat(2,1fr)}.ingredient-total-grid span:last-child{grid-column:1/-1}.card .actions .btn,.card .actions .fav{min-height:44px}}
+
+
+/* v26 mobile polish */
+@media(max-width:580px){
+  .app{padding-left:14px;padding-right:14px}
+  .grid{grid-template-columns:1fr;gap:14px}
+  .card{border-radius:22px;overflow:hidden}
+  .card .photo{height:220px}
+  .card .body{padding:16px}
+  .card .body h3{font-size:21px;line-height:1.22;margin-bottom:11px}
+  .card .meta{margin-bottom:6px}
+  .card .meta span{font-size:12px;padding:6px 9px}
+  .card .macros{gap:9px;margin:14px 0}
+  .card .macro{padding:10px 5px;border-radius:14px}
+  .card .macro b{font-size:18px}
+  .card .macro small{font-size:11px}
+  .card .actions{grid-template-columns:minmax(0,1fr) 56px;gap:10px}
+  .card .actions .btn.primary{min-height:52px;border-radius:16px;font-size:18px;font-weight:900;padding:0 18px}
+  .card .actions .fav{min-height:52px;border-radius:16px;font-size:26px}
+  .ingredient-list{gap:10px}
+  .ingredient-nutrition{border-radius:17px}
+  .ingredient-main{padding:14px 13px;gap:12px}
+  .ingredient-main input{width:26px;height:26px;accent-color:var(--accent)}
+  .ingredient-name{font-size:17px;line-height:1.35}
+  .ingredient-compact{font-size:13px;margin-top:3px}
+  .ingredient-expand{width:40px;height:40px;border-radius:12px;font-size:18px}
+  .ingredient-details{padding:12px}
+  .ingredient-nutri-grid{gap:7px}
+  .ingredient-nutri-cell{padding:9px 4px;border-radius:11px}
+  .ingredient-nutri-cell b{font-size:14px}
+  .ingredient-nutri-cell small{font-size:10px}
+  .section-box{padding:16px;border-radius:20px}
+  .section-box h3{font-size:22px}
+  .detail-quick-actions .btn,.cook-start{min-height:52px;font-size:17px;border-radius:16px}
+  .bottom-nav{height:calc(76px + env(safe-area-inset-bottom));padding:8px 8px env(safe-area-inset-bottom);grid-template-columns:repeat(5,1fr);box-shadow:0 -8px 24px rgba(25,60,48,.08)}
+  .nav-btn{font-size:12px;gap:5px;min-width:0}
+  .nav-btn .nav-icon{font-size:24px}
+  .nav-btn.add .nav-icon{width:52px;height:52px;margin-top:-28px;font-size:32px}
+  .nav-btn span:last-child{max-width:64px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
+@media(max-width:380px){
+  .card .photo{height:195px}
+  .card .body h3{font-size:19px}
+  .card .actions .btn.primary{font-size:17px}
+  .nav-btn{font-size:11px}
+}
