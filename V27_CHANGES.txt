@@ -1,0 +1,6 @@
+Japan Protein Cookbook v27
+- reviewed English and Japanese UI labels and added missing translations
+- added exact English/Japanese names for all cookbook recipes
+- removed hard-coded Czech labels from cooking mode, filters, tags, portions and nutrition summary
+- added a translation fallback so Japanese mode never displays Czech diacritics when an exact Japanese line is unavailable
+- updated PWA assets and cache to v27
