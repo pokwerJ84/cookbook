@@ -1,0 +1,38 @@
+/* Japan Protein Cookbook v26 mobile/UI improvements */
+.btn,.tab{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;gap:6px}
+.actions .btn,.actions .fav,.detail-quick-actions .btn,.cook-controls .btn,.top-actions .btn,.online-detail-actions .btn,.auth-actions .btn,.filter-sheet-actions .btn,.fs-status-actions .btn,.compact-tools .btn{justify-content:center;text-align:center}
+.actions .fav,.recipe-hero .hero-fav{display:flex;align-items:center;justify-content:center;color:#e04461!important;border-color:#f2c2cb;background:#fff5f7}
+.actions .fav{font-size:24px;font-weight:900}
+.recipe-hero .hero-fav{box-shadow:0 8px 18px rgba(224,68,97,.16)}
+.ingredient-check input,.ingredient-main input{width:24px!important;height:24px!important;min-width:24px}
+.ingredient-main{gap:12px;padding:13px}
+.ingredient-name{font-size:15px;line-height:1.4}
+.ingredient-expand{width:38px;height:38px;font-size:18px}
+.ingredient-total-box{margin-top:14px;padding:14px;border-radius:18px;background:#edf7f2;border:1px solid #cde9da}
+.ingredient-total-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.ingredient-total-title{font-weight:900;font-size:20px;line-height:1.15;margin:0}
+.ingredient-total-subtitle{margin-top:4px;font-size:12px;color:var(--muted);font-weight:700}
+.ingredient-total-section{background:#ffffffb8;border:1px solid #d9ece3;border-radius:14px;padding:10px 10px 12px;margin-top:10px}
+.ingredient-total-section-title{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.ingredient-total-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.ingredient-total-grid span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 5px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:62px}
+.ingredient-total-grid b{display:block;font-size:18px;line-height:1.05}
+.ingredient-total-grid small{font-size:11px;color:var(--muted);margin-top:4px}
+.bottom-nav{box-shadow:0 -7px 24px rgba(35,90,120,.08)}
+.nav-btn .nav-icon{font-size:23px}
+@media(max-width:580px){
+ .grid{grid-template-columns:1fr!important;gap:14px}
+ .card{border-radius:20px}
+ .card .photo{height:220px!important}
+ .body{padding:14px}
+ .body h3{font-size:18px}
+ .card .actions{grid-template-columns:1fr 52px!important;gap:9px}
+ .card .actions .btn,.card .actions .fav{min-height:48px}
+ .card .actions .btn.primary{font-size:15px}
+ .ingredient-total-head{flex-direction:column;align-items:stretch}
+ .ingredient-total-grid{grid-template-columns:repeat(2,1fr)}
+ .ingredient-total-grid span:last-child{grid-column:1/-1}
+ .bottom-nav{height:calc(74px + env(safe-area-inset-bottom));padding-top:8px}
+ .nav-btn{font-size:12px}
+ .nav-btn.add .nav-icon{width:48px;height:48px;font-size:30px}
+}
